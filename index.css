@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.TITULO {
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  margin-top: 0 auto;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+
+
+}
+
+nav {
+  display: list-item;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+a {
+  color: aliceblue;
+  box-sizing: border-box;
+}
+
+.TITULO:hover {
+  color: rgb(58, 22, 214);
+}
+
+
+.cuerpo {
+  background-image: url(..//FRONTED/caught-in-joy-ptVBlniJi50-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  letter-spacing: 6px;
+  color: white;
+  text-shadow: -2px 0 black, 0 -2px black, 2px 0 black, 0 2px black,
+    2px 2px black, -2px -2px black, -2px 2px rgb(173, 142, 142), 2px -2px black,
+    4px 3px rgb(250, 250, 252);
+
+}
+
+
+.cuerpo h1 {
+  text-align: center;
+  padding: 10%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 600%;
+  color: rgb(247, 241, 241);
+}
+
+
+.botonupload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+}
+
+button,
+button::after {
+  width: 230px;
+  height: 75px;
+  font-size: 36px;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 88px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+}
+
+button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: 'Upload Beat';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+.artistas h1{
+  font-family: 'Alfa Slab One';
+  text-align: center;
+  font-size: 40px;
+  color: antiquewhite;
+  text-shadow: 1px 2px #FF013C;
+}
+
+
+
+
+
+.artistas{
+  background-image: url(..//FRONTED/nazi.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 1000px;
+  
+}
+
+p{
+  color: antiquewhite;
+  text-shadow: 1px 2px #FF013C
+}
+
+.projects__grid{
+  display: grid;
+  height: 550px;
+  grid-template-areas: "img1 img1 img2 img3"
+  "img1 img1 img4 img5";
+  gap: 10px;
+}
+
+.projects__item{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+}
+
+.projects__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.projects__item:nth-of-type(1){
+  grid-area: img1;
+}
+.projects__item:nth-of-type(2){
+  grid-area: img2;
+}
+.projects__item:nth-of-type(3){
+  grid-area: img3;
+}
+.projects__item:nth-of-type(4){
+  grid-area: img4;
+}
+.projects__item:nth-of-type(5){
+  grid-area: img5;
+}
+
+.projects__hover{
+  position: absolute;
+  background: #dc143c8c;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(100%);
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+
+.projects__icon{
+  margin-top: 10px;
+  font-size: 30px;
+}
+.projects__item:hover .projects__hover{
+  transform: translateX(0%);
+}
+
+.subtitle{
+  color: antiquewhite;
+  text-shadow: 1px 2px #FF013C;
+}
+
+.footer{
+  background-color: antiquewhite;
+
+}
+
+.footer__grid{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+  align-items: center;
+
+}
+
+.footer__title{
+  font-weight: 400;
+  color: rgb(7, 7, 7);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.footer__icons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__container-icons{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  color: rgb(65, 142, 214);
+  text-align: center;
+  
+  
+}
+.footer__icon{
+  color: inherit;
+  font-size: 30px;
+  text-decoration: none;
+  
+
+
+}
+
+.fa.footer__icons{
+  line-height: 60px;
+  color: inherit;
+  font-size: 30px;
+  text-decoration: none;
+}
